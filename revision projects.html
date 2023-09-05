@@ -31,20 +31,23 @@
             }
 
             body {
-                background: #e1ecf5;
-                color: #607484;
+                background: #282C34;
+                color: #ABB2BA;
             }
 
                 a {
-                    color: #178fd8;
+                    color: #9BE68B;
                     -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                 }
 
                     a:hover {
-                        color: #1266bc;
-                        text-decoration: none !important;
+                        color: #f8ffbe;
                     }
+
+                h1 {
+                    color: #FFFFFF;
+                }
 
                 img {
                     max-width: 100% !important;
@@ -61,57 +64,54 @@
                     font-size: 80%;
                 }
 
-                .menu-button a {
+                .menu-button {
+                    content: "";
                     display: block;
+                    clear: both;
+                    width: 100%;
                     float: left;
-                    margin-right: 12px;
-                    background: #607483;
+                    border-bottom: 1px solid rgba(255,255,255,0.15);
+                    padding-bottom: 26px;
+                    margin: 12px 0 40px -2px;
+                }
+
+                .menu-button a {
+                    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                     border: none;
-                    border-radius: 4px;
-                    padding: 7px 6px;
+                    display: inline-block;
+                    float: left;
+                    margin-right: 16px;
                 }
 
                     .menu-button a svg {
+                        float: left;
                         width: 18px;
                         height: 18px;
-                        display: block;
-                        fill: #FFFFFF;
+                        display: inline-block;
                         -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                         transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        fill: #9BE68B;
                     }
 
-                    .menu-button a:hover {
-                        background: #405361;
-                        box-shadow: 0 4px 8px rgba(64,83,97,0.15);
+                    .menu-button a:hover svg {
+                        fill: #f8ffbe;
                     }
 
-                    .title {
-                        color: #405361;
+                    .menu-button-title {
                         float: left;
-                        width: 100%;
-                        display: block;
-                        margin: 12px 0 24px 0;
-                        padding-bottom: 8px;
-                        border-bottom: 1px solid rgba(64,83,97,0.15);
-                        font-weight: 700;
+                        display: inline-block;
+                        margin: -1px 0 0 4px;
                     }
 
                 .content {
                     padding: 16px;
                     max-width: 760px;
                     margin: 0 auto;
+                    content: "";
+                    display: block;
+                    clear: both;
                 }
-
-                    .content-box {
-                        background: #FFFFFF;
-                        border-radius: 12px;
-                        box-shadow: 0 4px 8px rgba(64,83,97,0.05);
-                        padding: 22px 24px 32px 24px;
-                    }
-
-                    .page-content {
-                        margin-top: 24px;
-                    }
 
         </style>
 
@@ -119,26 +119,21 @@
 
     <body>
 
-        <div class="content cf">
+        <div class="content">
 
-            <div class="content-box cf">
-
-                <div class="menu-button cf">
-                    <a href="javascript:document.location='index.html';" class="button-home">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M16.84 8.134L15 6.416V3a1.001 1.001 0 0 0-1-1h-1a1.001 1.001 0 0 0-1 1v.616L9.34 1.134a.5.5 0 0 0-.68 0l-7.5 7A.5.5 0 0 0 1.5 9H3v7h-.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H15V9h1.5a.5.5 0 0 0 .34-.866zM7 16v-5h4v5z" /></svg>
-                    </a>
-                    <a href="javascript:document.location='_page_index.html';" class="button-list">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M14 1H4a1.001 1.001 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1.001 1.001 0 0 0-1-1zM5.5 4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1zm6 10h-6a.5.5 0 0 1 0-1h6a.5.5 0 0 1 0 1zm1-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /></svg>
-                    </a>
-
-                </div>
-
-                <div class="title cf">revision projects</div>
-
-                <div class="page-content cf">
+            <div class="menu-button">
+                <a href="javascript:document.location='index.html';" class="button-home">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M16.84 8.134L15 6.416V3a1.001 1.001 0 0 0-1-1h-1a1.001 1.001 0 0 0-1 1v.616L9.34 1.134a.5.5 0 0 0-.68 0l-7.5 7A.5.5 0 0 0 1.5 9H3v7h-.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H15V9h1.5a.5.5 0 0 0 .34-.866zM7 16v-5h4v5z" /></svg>
+                    <span class="menu-button-title">Home</span>
+                </a>
+                <a href="javascript:document.location='_page_index.html';" class="button-list">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18"><path d="M14 1H4a1.001 1.001 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1.001 1.001 0 0 0-1-1zM5.5 4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1zm6 10h-6a.5.5 0 0 1 0-1h6a.5.5 0 0 1 0 1zm1-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /></svg>
+                    <span class="menu-button-title">Pages</span>
+                </a>
+            </div>
 
 
-                    <h2>To do a Revision Project for this class, first choose something you’ve written that you would like to revise.</h2>
+                <h2>To do a Revision Project for this class, first choose something you’ve written that you would like to revise.</h2>
 <p>You will then post a link to it in the Discussion Board along with a question for your classmates to ponder when they read your draft. Then you will read one or more of your classmates’ drafts and respond to <em>their</em> question. Then you will work on revising your draft based on whatever feedback you get from your classmates.</p>
 <h2>So, each Revision Project consists of two parts...</h2>
 <ol>
@@ -182,7 +177,7 @@
 <ul>
 <li>Please provide grammar/mechanics editing suggestions, especially with regard to [whatever you’re not great at; for example, verb tense usage, varying sentence structure, comma usage, dialog format, etc]</li>
 <li>Do you think the structure is effective? Are the different parts presented in an effective order? What are some ideas for how to rearrange it to make the narrative more compelling?</li>
-<li>How’s my <a href="verisimilitude.html">verisimilitude</a>? Does my factual information seem convincing and help make the story seem real?</li>
+<li>How’s my <a href="https://www.websters1913.com/words/Verisimilitude">verisimilitude</a>? Does my factual information seem convincing and help make the story seem real?</li>
 <li>Does the plot make sense? What about [specific parts you’re not confident about]?</li>
 <li>Are my characters believable/relatable?</li>
 <li>How does it flow? Do I have good transitions? Does the introduction prepare the reader for what comes later?</li>
@@ -207,10 +202,6 @@
 <p>The Revision Projects are not the kind of assignment where I tell you exactly what to do and how to do it. They are a collaborative inquiry process—a conversation among you and your classmates, and between you and yourself as you revisit your writing to find opportunities for improvement. I won’t be scrutinizing the specifics of each student’s writing; rather, I’ll be observing as you make your own decisions (with the help of the Discussion Board) about what to change and how to change it. During the second part of each Revision Project, you’ll have an opportunity to reflect on the process and show or tell me how it went; that reflection is what I’ll base that part of the grade on. As long as you give detailed and thoughtful responses there, showing that you were willing to dive into the process and were not afraid to “break stuff” and experiment with changing your writing to see what works and what doesn’t work, you’ll get that “ADV.” It’s less about what <em>I</em> think about your piece before and after, and more about <em>your</em> experience of taking the piece you chose from “before” to “after”—and what you can show that you learned from that.</p>
 
 
-                </div>
-
-            </div>
         </div>
-
     </body>
 </html>
