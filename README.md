@@ -1,2 +1,2 @@
 # npydyuan.github.io
-Experimental website to be used as the textbook for my creative writing class.
+Static website (made with VoodooPad so far, a mix of markdown and rich text pages) to be used as the textbook for my creative writing class.
