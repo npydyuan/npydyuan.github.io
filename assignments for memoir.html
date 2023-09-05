@@ -8,76 +8,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-        <title>meerkat skool.vpdoc: assignments for memoir</title>
-
-        <script>
-
-            var isMobile = navigator.userAgent.match(/Mobile/i) != null;
-
-            function updateWebApp() {
-
-                cache = window.applicationCache;
-                cache.addEventListener('onchecking',  cacheCheckingListener, false);
-                cache.addEventListener('updateready', cacheUpdateReadyListener, false);
-                cache.addEventListener('error', cacheErrorListener, false);
-                cache.addEventListener('cached', cacheCachedListener, false);
-                cache.addEventListener('progress', cacheProgressListener, false);
-                cache.addEventListener('oncached', cacheonCachedListener, false);
-
-                //waLog("started?");
-                //waLog(window.applicationCache.status + "");
-            }
-
-            function cacheCheckingListener(event) {
-
-            }
-
-            function cacheUpdateReadyListener(event) {
-                if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-                    window.applicationCache.swapCache();
-                    window.location.reload();
-                }
-            }
-
-            function cacheCachedListener(event) {
-
-            }
-
-            function cacheErrorListener(event) {
-
-            }
-
-            function cacheProgressListener(progressEvent) {
-                //waLog(window.applicationCache.status + "");
-                // waLog(progressEvent.loaded + " of " + progressEvent.total);
-            }
-
-            function cacheonCachedListener(event) {
-                //waLog("First time cached.");
-            }
-
-            function waLog(v) {
-                document.getElementById("cons").innerHTML = document.getElementById("cons").innerHTML + "<br/>!" + v
-            }
-
-            var swapped = false;
-
-            // Check if a new cache is available on page load.
-            window.addEventListener('load', function(e) {
-
-                var isIndexPage = "assignments for memoir.html" == "index.html";
-
-                if (isIndexPage && isMobile && window.navigator.onLine) {
-                    updateWebApp();
-                }
-
-                if (history.previous) {
-                    alert("previous!");
-                }
-
-            }, false);
-
-        </script>
+        <title>assignments for memoir</title>
 
         <style type="text/css">
 
@@ -100,46 +31,47 @@
             }
 
             body {
-                background: #e8e8e8;
+                background: #36322e;
+                color: #b6aca2;
             }
 
-            a {
-                color: #217dae;
-            }
-
-                a:hover {
-                    color: #17587b;
+                a {
+                    color: #FFFFFF;
+                    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                 }
 
-            li {
-                margin-left: 16px;
-                margin-bottom: 4px;
-                font-size: 80%;
-            }
+                    a:hover {
+                        color: #ffe1b9;
+                        text-decoration: none !important;
+                    }
 
-            p {
-                line-height: 1.2em !important;
-            }
+                img {
+                    max-width: 100% !important;
+                    height: auto !important;
+                }
 
-            img {
-                max-width: 100% !important;
-                height: auto !important;
-            }
+                p {
+                    line-height: 1.2em !important;
+                }
 
-            .toolbar {
-                width: 100%;
-                padding: 6px 6px;
-                background: #EAEAEA;
-                background: -webkit-linear-gradient(to bottom, #F5F5F5, #EAEAEA);
-                background: linear-gradient(to bottom, #F5F5F5, #EAEAEA);
-                border-bottom: 1px solid rgba(0,0,0,0.2);
-                box-shadow: 0 1px 1px rgba(0,0,0,0.075);
-                content: "";
-                display: table;
-                clear: both;
-            }
+                li {
+                    margin-left: 24px;
+                    margin-bottom: 4px;
+                    font-size: 80%;
+                }
 
-                .toolbar-buttons {
+                .title {
+                    text-align: center;
+                    width: 100%;
+                    display: block;
+                    margin: 10px 0 20px 0;
+                    padding-bottom: 8px;
+                    font-size: 175%;
+                    font-weight: 700;
+                }
+
+                .menu-button {
                     text-align: center;
                     margin: 0 auto;
                     content: "";
@@ -147,96 +79,75 @@
                     clear: both;
                 }
 
-                    .toolbar-button {
-                        background: #F8F8F8;
-                        background: -webkit-linear-gradient(to bottom, #F8F8F8, #F2F2F2);
-                        background: linear-gradient(to bottom, #F8F8F8, #F2F2F2);
-                        border: 1px solid rgba(0,0,0,0.20);
-                        box-shadow: 0 1px 1px rgba(0,0,0,0.075);
-                        border-radius: 4px;
-                        display: inline-block;
-                        float: left;
-                        background-clip: padding-box;
-                        text-indent: -9999px;
-                        margin-right: 8px;
-                        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                .menu-button a {
+                    display: inline-block;
+                    float: left;
+                    background: #514c45;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 5px 10px 6px 10px;
+                    margin: 0 6px;
+                    text-decoration: none;
+                }
+
+                    .menu-button a:hover {
+                        background: #ffe1b9;
+                        color: #36322e;
+                        box-shadow: 0 4px 8px rgba(64,83,97,0.15);
                     }
 
-                        .button-back {
-                            margin-right: 0;
-                            border-radius: 4px 0 0 4px;
-                            border-right: 0 !important;
-                        }
+                    .button-text {
+                        font-size: 90%;
+                    }
 
-                        .button-forward {
-                            border-radius: 0 4px 4px 0;
-                        }
-
-                        .toolbar-button svg {
-                            width: 18px;
-                            height: 18px;
-                            display: block;
-                            margin: 4px 6px;
-                            -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                            fill: #626262;
-                        }
-
-                        .toolbar-button:hover {
-                            background: #FFFFFF;
-                            border: 1px solid rgba(0,0,0,0.25);
-                            box-shadow: 0 2px 2px rgba(0,0,0,0.15);
-                        }
-
-                            .toolbar-button:hover svg {
-                                fill: #000000;
-                            }
-
-            .content {
-                padding: 16px;
-                max-width: 960px;
-                margin: 0 auto;
-            }
-
-                .content-box {
-                    background: #FFFFFF;
-                    border-radius: 6px;
-                    box-shadow: 0 2px 4px rgba(64,83,97,0.05);
-                    border: 1px solid rgba(0,0,0,0.20);
-                    border-width: 1px 1px 4px 1px;
-                    padding: 22px 24px 32px 24px;
+                .content {
+                    padding: 16px 0 0 0;
+                    max-width: 760px;
+                    margin: 0 auto;
                 }
 
-                .title {
-                    text-align: center;
-                    width: 100%;
-                    margin: 8px auto 24px auto;
-                    font-weight: 600;
-                }
+                    .page-content {
+                        margin-top: 34px;
+                        padding: 24px 24px 18px 24px;
+                        border-radius: 0;
+                        background: #2c2926;
+                    }
+
+                    @media (min-width: 760px) {
+                        .content {
+                            padding: 16px;
+                        }
+
+                        .page-content {
+                            border-radius: 4px;
+                        }
+                    }
 
         </style>
 
     </head>
 
     <body>
-        <div class="toolbar">
-            <div class="toolbar-buttons">
-                <a href="javascript:window.history.back();" class="toolbar-button button-back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M12 16a.997.997 0 0 1-.707-.293l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 1 1 1.414 1.414L7.414 9l5.293 5.293A1 1 0 0 1 12 16z" /></svg></a>
-                <a href="javascript:window.history.forward();" class="toolbar-button button-forward"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M6 16a1 1 0 0 1-.707-1.707L10.586 9 5.293 3.707a1 1 0 0 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6A.997.997 0 0 1 6 16z" /></svg></a>
-                <a href="javascript:document.location='index.html';" class="toolbar-button button-start"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M16.84 8.134L15 6.416V3a1.001 1.001 0 0 0-1-1h-1a1.001 1.001 0 0 0-1 1v.616L9.34 1.134a.5.5 0 0 0-.68 0l-7.5 7A.5.5 0 0 0 1.5 9H3v7h-.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H15V9h1.5a.5.5 0 0 0 .34-.866zM7 16v-5h4v5z" /></svg></a>
-                <a href="javascript:document.location='_page_index.html';" class="toolbar-button button-list"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M14 1H4a1.001 1.001 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1.001 1.001 0 0 0-1-1zM5.5 4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1zm6 10h-6a.5.5 0 0 1 0-1h6a.5.5 0 0 1 0 1zm1-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /></svg></a>
+
+        <div class="content cf">
+
+            <div class="title cf">assignments for memoir</div>
+
+            <div class="menu-button cf">
+                <a href="javascript:document.location='index.html';" class="button-home">
+                    <span class="button-text">Home</span>
+                </a>
+                <a href="javascript:document.location='_page_index.html';" class="button-list">
+                    <span class="button-text">Page List</span>
+                </a>
+
             </div>
-        </div>
 
-        <div class="content">
-
-            <div class="content-box">
-
-                <h3 class="title">assignments for memoir</h3>
+            <div class="page-content cf">
 
                 <p>If you want to work on personal, memory-driven, or autobiographical writing this week, consider one of these assignments. <em>Check back from time to time, as I plan to keep adding to these. Suggestions welcome!</em></p>
-<p><strong>“Where I’m From” Poem</strong> (T1: Communication)</p>
+<h4>“Where I’m From” Poem</h4>
+<p>(T1: Communication)</p>
 <blockquote>
 <p>(Re)read <a href="http://www.georgeellalyon.com/where.html">Georgia Lyon’s autobiographical poem “Where I’m From”</a>.</p>
 </blockquote>
@@ -246,7 +157,8 @@
 <blockquote>
 <p>Here’s an example of <a href="https://docs.google.com/document/d/1GgJTUg2an6NkJUCksjRu_-0HnkPXkvZWqvvb6NEZP04/edit?usp=sharing">one possible way to approach writing a “Where I’m From”</a>.</p>
 </blockquote>
-<p><strong>Possession Autobiography</strong>  (T1: Communication)</p>
+<h4>Possession Autobiography</h4>
+<p>(T1: Communication)</p>
 <blockquote>
 <p>In <a href="https://drive.google.com/open?id=14-elyfUg9FepPSrJxT2cw_ecImPoGy61&amp;authuser=mschulte%40waukesha.k12.wi.us&amp;usp=drive_fs">“The Jacket,”</a> Gary Soto describes an article of clothing that is (at first) repulsive to him—yet over time, he comes to accept it as a part of himself. In <a href="https://drive.google.com/open?id=143hg7agq9FywlFD5o50r3fVIf8LvbZYh&amp;authuser=mschulte%40waukesha.k12.wi.us&amp;usp=drive_fs">“The Bike,”</a> he describes how one simple machine can lead him into exhilarating experiences but also into deep trouble. In “The Inner Tube,” he explains how a dusty and busted undesirable object totally changed his fortune over the course of an afternoon.</p>
 </blockquote>
@@ -281,7 +193,8 @@
 <blockquote>
 <p>Here’s a short <a href="https://drive.google.com/file/d/1drGKfnRjb90ZSNp6u08UTbEn8nlUdvot/view">video with tips on starting the possession autobiography</a>!</p>
 </blockquote>
-<p><strong>Episodic Autobiographical Reflection</strong>  (T1: Communication)</p>
+<h4>Episodic Autobiographical Reflection</h4>
+<p>(T1: Communication)</p>
 <blockquote>
 <p>“Party like it’s 1999” - Ask (practically) anyone who was there—<a href="https://duckduckgo.com/?t=ffab&amp;q=the+golden+age+of+blogs&amp;ia=web">the golden age of blogs</a> was centered on the late 90s and early 2000s. What’s a blog but an episodic, idiosynchratic instance of the spirit of <a href="memoir.html">memoir</a>? This week, you could do some kind of personal web-based freestyle writing (whether you wish to call it “blogging” or not), and then for this assignment share a link to show your work!</p>
 </blockquote>
@@ -294,5 +207,6 @@ c. Write narratives that develop real or imagined experiences or events using re
             </div>
 
         </div>
+
     </body>
 </html>
