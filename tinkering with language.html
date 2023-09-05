@@ -31,18 +31,18 @@
             }
 
             body {
-                background: #36322e;
-                color: #b6aca2;
+                background: #e1ecf5;
+                color: #607484;
             }
 
                 a {
-                    color: #FFFFFF;
+                    color: #178fd8;
                     -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                 }
 
                     a:hover {
-                        color: #ffe1b9;
+                        color: #1266bc;
                         text-decoration: none !important;
                     }
 
@@ -61,66 +61,56 @@
                     font-size: 80%;
                 }
 
-                .title {
-                    text-align: center;
-                    width: 100%;
-                    display: block;
-                    margin: 10px 0 20px 0;
-                    padding-bottom: 8px;
-                    font-size: 175%;
-                    font-weight: 700;
-                }
-
-                .menu-button {
-                    text-align: center;
-                    margin: 0 auto;
-                    content: "";
-                    display: table;
-                    clear: both;
-                }
-
                 .menu-button a {
-                    display: inline-block;
+                    display: block;
                     float: left;
-                    background: #514c45;
+                    margin-right: 12px;
+                    background: #607483;
                     border: none;
                     border-radius: 4px;
-                    padding: 5px 10px 6px 10px;
-                    margin: 0 6px;
-                    text-decoration: none;
+                    padding: 7px 6px;
                 }
 
+                    .menu-button a svg {
+                        width: 18px;
+                        height: 18px;
+                        display: block;
+                        fill: #FFFFFF;
+                        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+
                     .menu-button a:hover {
-                        background: #ffe1b9;
-                        color: #36322e;
+                        background: #405361;
                         box-shadow: 0 4px 8px rgba(64,83,97,0.15);
                     }
 
-                    .button-text {
-                        font-size: 90%;
+                    .title {
+                        color: #405361;
+                        float: left;
+                        width: 100%;
+                        display: block;
+                        margin: 12px 0 24px 0;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid rgba(64,83,97,0.15);
+                        font-weight: 700;
                     }
 
                 .content {
-                    padding: 16px 0 0 0;
+                    padding: 16px;
                     max-width: 760px;
                     margin: 0 auto;
                 }
 
-                    .page-content {
-                        margin-top: 34px;
-                        padding: 24px 24px 18px 24px;
-                        border-radius: 0;
-                        background: #2c2926;
+                    .content-box {
+                        background: #FFFFFF;
+                        border-radius: 12px;
+                        box-shadow: 0 4px 8px rgba(64,83,97,0.05);
+                        padding: 22px 24px 32px 24px;
                     }
 
-                    @media (min-width: 760px) {
-                        .content {
-                            padding: 16px;
-                        }
-
-                        .page-content {
-                            border-radius: 4px;
-                        }
+                    .page-content {
+                        margin-top: 24px;
                     }
 
         </style>
@@ -131,33 +121,34 @@
 
         <div class="content cf">
 
-            <div class="title cf">tinkering with language</div>
+            <div class="content-box cf">
 
-            <div class="menu-button cf">
-                <a href="javascript:document.location='index.html';" class="button-home">
-                    <span class="button-text">Home</span>
-                </a>
-                <a href="javascript:document.location='_page_index.html';" class="button-list">
-                    <span class="button-text">Page List</span>
-                </a>
+                <div class="menu-button cf">
+                    <a href="javascript:document.location='index.html';" class="button-home">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M16.84 8.134L15 6.416V3a1.001 1.001 0 0 0-1-1h-1a1.001 1.001 0 0 0-1 1v.616L9.34 1.134a.5.5 0 0 0-.68 0l-7.5 7A.5.5 0 0 0 1.5 9H3v7h-.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H15V9h1.5a.5.5 0 0 0 .34-.866zM7 16v-5h4v5z" /></svg>
+                    </a>
+                    <a href="javascript:document.location='_page_index.html';" class="button-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M14 1H4a1.001 1.001 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1.001 1.001 0 0 0-1-1zM5.5 4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1zm6 10h-6a.5.5 0 0 1 0-1h6a.5.5 0 0 1 0 1zm1-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /></svg>
+                    </a>
 
-            </div>
+                </div>
 
-            <div class="page-content cf">
+                <div class="title cf">tinkering with language</div>
 
-                <style type="text/css">
+                <div class="page-content cf">
+
+
+                    <style type="text/css">
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 4.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #103cc0; min-height: 14.0px}
-    p.p6 {margin: 0.0px 0.0px 4.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #103cc0}
-    li.li4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #103cc0}
+    p.p3 {margin: 0.0px 0.0px 4.0px 0.0px; font: 12.0px Helvetica}
+    p.p4 {margin: 0.0px 0.0px 4.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
     span.s1 {text-decoration: underline}
     span.s2 {font-kerning: none}
     span.s3 {text-decoration: underline ; font-kerning: none}
-    span.s4 {color: #103cc0; -webkit-text-stroke: 0px #000000}
-    span.s5 {text-decoration: underline ; font-kerning: none; color: #000000; -webkit-text-stroke: 0px #103cc0}
-    span.s6 {color: #103cc0; -webkit-text-stroke: 0px #0c36a5}
+    span.s4 {color: #103cc0}
+    span.s5 {text-decoration: underline ; font-kerning: none; color: #000000}
     ul.ul1 {list-style-type: disc}
   </style>
 
@@ -165,80 +156,83 @@
 <p class="p2"><br></p>
 <p class="p3"><span class="s2">Whenever you proofread and edit (for one of your <a href="revision%20projects.html"><span class="s3">revision projects</span></a>, for example) strive for clarity. Consider the following, and review as needed:</span></p>
 <ul class="ul1">
-  <li class="li4"><span class="s4"><a href="http://www.chompchomp.com/rules/csfsrules.htm"><span class="s5">Avoid run-on sentences</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.chompchomp.com/rules/csfsrules.htm"><span class="s5">Avoid run-on sentences</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_5"><span class="s5">Do not join independent clauses by a comma</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_5"><span class="s5">Do not join independent clauses by a comma</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.chompchomp.com/rules/fragrules.htm"><span class="s5">Avoid sentence fragments</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.chompchomp.com/rules/fragrules.htm"><span class="s5">Avoid sentence fragments</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="https://www.grammarly.com/blog/commonly-confused-words/"><span class="s5">Watch out for commonly confused words</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="https://www.grammarly.com/blog/commonly-confused-words/"><span class="s5">Watch out for commonly confused words</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.chompchomp.com/rules/aposrules.htm"><span class="s5">Find and fix apostrophe errors</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.chompchomp.com/rules/aposrules.htm"><span class="s5">Find and fix apostrophe errors</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.chompchomp.com/presentations/punctuation.ppt"><span class="s5">Review punctuation rules</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.chompchomp.com/presentations/punctuation.ppt"><span class="s5">Review punctuation rules</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.chompchomp.com/terms/semicolon.htm"><span class="s5">Review semicolon usage</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.chompchomp.com/terms/semicolon.htm"><span class="s5">Review semicolon usage</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="https://www.grammarbook.com/punctuation/capital.asp"><span class="s5">Review capitalization rules</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="https://www.grammarbook.com/punctuation/capital.asp"><span class="s5">Review capitalization rules</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.chompchomp.com/rules/prorefrules.htm"><span class="s5">Find and fix pronoun reference errors</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.chompchomp.com/rules/prorefrules.htm"><span class="s5">Find and fix pronoun reference errors</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.chompchomp.com/rules/proagreerules.htm"><span class="s5">Find and fix pronoun agreement errors</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.chompchomp.com/rules/proagreerules.htm"><span class="s5">Find and fix pronoun agreement errors</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="https://www.grammar-monster.com/glossary/tense.htm"><span class="s5">Don’t mix present and past tense</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="https://www.grammar-monster.com/glossary/tense.htm"><span class="s5">Don’t mix present and past tense</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="https://www.pcc.edu/staff/pdf/645/SubjectVerbAgreement.pdf"><span class="s5">Make your subject agree with your verb</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="https://www.pcc.edu/staff/pdf/645/SubjectVerbAgreement.pdf"><span class="s5">Make your subject agree with your verb</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.chompchomp.com/rules/structurerules.htm"><span class="s5">Find and fix errors in parallel structure</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.chompchomp.com/rules/structurerules.htm"><span class="s5">Find and fix errors in parallel structure</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.chompchomp.com/rules/modifierrules.htm"><span class="s5">Avoid dangling and misplaced modifiers</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.chompchomp.com/rules/modifierrules.htm"><span class="s5">Avoid dangling and misplaced modifiers</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://writing2.richmond.edu/writing/wweb/cliche.html"><span class="s5">Avoid clichés</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://writing2.richmond.edu/writing/wweb/cliche.html"><span class="s5">Avoid clichés</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_10"><span class="s5">Use the active voice</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_10"><span class="s5">Use the active voice</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_13"><span class="s5">Omit needless words</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_13"><span class="s5">Omit needless words</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_12"><span class="s5">Use definite, specific, concrete language</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_12"><span class="s5">Use definite, specific, concrete language</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_14"><span class="s5">Avoid a succession of loose sentences</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_14"><span class="s5">Avoid a succession of loose sentences</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_16"><span class="s5">Keep related words together</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_16"><span class="s5">Keep related words together</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_18"><span class="s5">Place the emphatic words of a sentence at the end</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_18"><span class="s5">Place the emphatic words of a sentence at the end</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="https://courses.byui.edu/AcademicSupport/writing-center/pdf/awkward_sentences.pdf"><span class="s5">Clear up awkward sentences</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="https://courses.byui.edu/AcademicSupport/writing-center/pdf/awkward_sentences.pdf"><span class="s5">Clear up awkward sentences</span></a></span></li>
 </ul>
 <ul class="ul1">
-  <li class="li4"><span class="s6"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_11"><span class="s5">Put statements in positive form</span></a></span></li>
+  <li class="li1"><span class="s4"><a href="http://www.gutenberg.org/files/37134/37134-h/37134-h.htm#Rule_11"><span class="s5">Put statements in positive form</span></a></span></li>
 </ul>
-<p class="p5"><span class="s2"></span><br></p>
-<p class="p6"><span class="s2">Remember, if you need help or just wish to discuss matters of usage and grammar, you may send me a draft for feedback. A Google Doc link (with “Commenter” enabled) usually works best.</span></p>
+<p class="p2"><span class="s2"></span><br></p>
+<p class="p3"><span class="s2">You may also find useful these <a href="examples%20of%20grammatical%20errors.html"><span class="s3">examples of grammatical errors</span></a>.</span></p>
+<p class="p4"><span class="s2"></span><br></p>
+<p class="p3"><span class="s2">Remember, if you need help or just wish to discuss matters of usage and grammar, you may send me a draft for feedback. A Google Doc link (with “Commenter” enabled) usually works best.</span></p>
 
+
+                </div>
 
             </div>
-
         </div>
 
     </body>

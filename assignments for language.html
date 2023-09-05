@@ -31,18 +31,18 @@
             }
 
             body {
-                background: #36322e;
-                color: #b6aca2;
+                background: #e1ecf5;
+                color: #607484;
             }
 
                 a {
-                    color: #FFFFFF;
+                    color: #178fd8;
                     -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                 }
 
                     a:hover {
-                        color: #ffe1b9;
+                        color: #1266bc;
                         text-decoration: none !important;
                     }
 
@@ -61,66 +61,56 @@
                     font-size: 80%;
                 }
 
-                .title {
-                    text-align: center;
-                    width: 100%;
-                    display: block;
-                    margin: 10px 0 20px 0;
-                    padding-bottom: 8px;
-                    font-size: 175%;
-                    font-weight: 700;
-                }
-
-                .menu-button {
-                    text-align: center;
-                    margin: 0 auto;
-                    content: "";
-                    display: table;
-                    clear: both;
-                }
-
                 .menu-button a {
-                    display: inline-block;
+                    display: block;
                     float: left;
-                    background: #514c45;
+                    margin-right: 12px;
+                    background: #607483;
                     border: none;
                     border-radius: 4px;
-                    padding: 5px 10px 6px 10px;
-                    margin: 0 6px;
-                    text-decoration: none;
+                    padding: 7px 6px;
                 }
 
+                    .menu-button a svg {
+                        width: 18px;
+                        height: 18px;
+                        display: block;
+                        fill: #FFFFFF;
+                        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+
                     .menu-button a:hover {
-                        background: #ffe1b9;
-                        color: #36322e;
+                        background: #405361;
                         box-shadow: 0 4px 8px rgba(64,83,97,0.15);
                     }
 
-                    .button-text {
-                        font-size: 90%;
+                    .title {
+                        color: #405361;
+                        float: left;
+                        width: 100%;
+                        display: block;
+                        margin: 12px 0 24px 0;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid rgba(64,83,97,0.15);
+                        font-weight: 700;
                     }
 
                 .content {
-                    padding: 16px 0 0 0;
+                    padding: 16px;
                     max-width: 760px;
                     margin: 0 auto;
                 }
 
-                    .page-content {
-                        margin-top: 34px;
-                        padding: 24px 24px 18px 24px;
-                        border-radius: 0;
-                        background: #2c2926;
+                    .content-box {
+                        background: #FFFFFF;
+                        border-radius: 12px;
+                        box-shadow: 0 4px 8px rgba(64,83,97,0.05);
+                        padding: 22px 24px 32px 24px;
                     }
 
-                    @media (min-width: 760px) {
-                        .content {
-                            padding: 16px;
-                        }
-
-                        .page-content {
-                            border-radius: 4px;
-                        }
+                    .page-content {
+                        margin-top: 24px;
                     }
 
         </style>
@@ -131,75 +121,67 @@
 
         <div class="content cf">
 
-            <div class="title cf">assignments for language</div>
+            <div class="content-box cf">
 
-            <div class="menu-button cf">
-                <a href="javascript:document.location='index.html';" class="button-home">
-                    <span class="button-text">Home</span>
-                </a>
-                <a href="javascript:document.location='_page_index.html';" class="button-list">
-                    <span class="button-text">Page List</span>
-                </a>
+                <div class="menu-button cf">
+                    <a href="javascript:document.location='index.html';" class="button-home">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M16.84 8.134L15 6.416V3a1.001 1.001 0 0 0-1-1h-1a1.001 1.001 0 0 0-1 1v.616L9.34 1.134a.5.5 0 0 0-.68 0l-7.5 7A.5.5 0 0 0 1.5 9H3v7h-.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H15V9h1.5a.5.5 0 0 0 .34-.866zM7 16v-5h4v5z" /></svg>
+                    </a>
+                    <a href="javascript:document.location='_page_index.html';" class="button-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M14 1H4a1.001 1.001 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1.001 1.001 0 0 0-1-1zM5.5 4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1zm6 10h-6a.5.5 0 0 1 0-1h6a.5.5 0 0 1 0 1zm1-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /></svg>
+                    </a>
 
-            </div>
+                </div>
 
-            <div class="page-content cf">
+                <div class="title cf">assignments for language</div>
 
-                <style type="text/css">
+                <div class="page-content cf">
+
+
+                    <style type="text/css">
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
     p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
     p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    li.li4 {margin: 6.0px 0.0px 3.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #103cc0}
-    li.li5 {margin: 0.0px 0.0px 3.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    li.li6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    span.s1 {font: 12.0px Helvetica}
-    span.s2 {-webkit-text-stroke: 0px #000000}
-    span.s3 {font-kerning: none; -webkit-text-stroke: 0px #000000}
-    span.s4 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #103cc0}
-    span.s5 {font-kerning: none}
-    span.s6 {font: 12.0px 'Apple Color Emoji'; font-kerning: none}
-    span.s7 {font: 12.0px 'Apple Color Emoji'}
-    ul.ul1 {list-style-type: disc}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'}
+    span.s1 {text-decoration: underline}
+    span.s2 {font: 12.0px 'Apple Color Emoji'}
   </style>
 
 <p class="p1">If you want to work on understanding how language works, consider one of these assignments. <i>Check back from time to time, as I plan to keep adding to these. Suggestions welcome!</i></p>
 <p class="p2"><br></p>
-<p class="p3"><b>Grammar Scavenger Hunt</b><span class="s1"> (T3: Language)<span class="Apple-converted-space">&nbsp;</span></span></p>
+<p class="p3"><a id="Grammar Scavenger Hunt"><b>Grammar Scavenger Hunt</b></a></p>
 <p class="p2"><br></p>
-<p class="p1">Begin by browsing through the revision project discussion boards, websites, social media posts, or emails you've received (or written), looking for errors or irregularities in grammar or usage. For each one you find, consider how you would correct the error.</p>
+<p class="p1">(T3: Language)</p>
+<p class="p1">Begin by browsing through the Discussion Boards for our class <a href="revision%20projects.html"><span class="s1">Revision Projects</span></a>, websites, social media posts, or emails you've received (or written). <b>Look for errors or irregularities in grammar or usage.</b> For each one you find, consider how you would correct the error.</p>
 <p class="p2"><br></p>
 <p class="p1">Please do not just google “examples of ____ error” and paste in the answers. Find your error examples in real-life, to make this assignment more authentic.</p>
 <p class="p2"><br></p>
 <p class="p1">For this assignment, we’re talking about “Standard American English.”<a href="assignments%20for%20language.html">*</a> What is or isn’t an “error” can vary depending on context, intended audience, etc. This activity is not intended as a judgment of anyone’s writing or speaking; it’s an opportunity to think like an editor. If you disagree with something someone posts in the Discussion Board, engage them but don’t yell at them.</p>
 <p class="p2"><br></p>
-<p class="p1">Following are some examples of kinds of errors you may look for. You may wish to watch this <a href="https://drive.google.com/file/d/1nM3yN3JkSucIjiQbHmBpvBnhan9pZRxw/view?usp=share_link">video explaining several of the grammar topics</a> involved with this assignment.</p>
-<ul class="ul1">
-  <li class="li4"><span class="s2"></span><span class="s3">Find an example of a <a href="https://chompchomp.com/terms/fusedsentence.htm"><span class="s4">run-on sentence</span></a>. <a href="https://drive.google.com/file/d/1_Xd6rIJ5nWOKxhr6d92FiNwsyf3tHf5c/view?usp=sharing"><span class="s4"><i>Video examples</i></span></a><i>!</i></span></li>
-  <li class="li5"><span class="s5">Find an example of a <a href="https://chompchomp.com/terms/fragment.htm"><span class="s4">sentence fragment</span></a>.</span></li>
-  <li class="li5"><span class="s5">Find an example of a <a href="https://chompchomp.com/terms/misplacedmodifier.htm"><span class="s4">misplaced</span></a> or <a href="https://chompchomp.com/terms/danglingmodifier.htm"><span class="s4">dangling</span></a> modifier. <a href="https://drive.google.com/file/d/1yfjf_BmPC_1KzF8BTX2uB2npaU0_gGjf/view?usp=share_link"><span class="s4">Here’s a video</span></a> discussing an example of a dangling modifier.</span></li>
-  <li class="li5"><span class="s5">Find an example of a <a href="https://owl.purdue.edu/owl/general_writing/punctuation/index.html"><span class="s4">punctuation</span></a> error.</span></li>
-  <li class="li5"><span class="s5">Find an example of a <a href="https://owl.purdue.edu/owl/general_writing/mechanics/help_with_capitals.html"><span class="s4">capitalization</span></a> error.</span></li>
-  <li class="li5"><span class="s5">Find an example of a <a href="https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verb_tense_consistency.html"><span class="s4">verb tense inconsistency</span></a> (for example, shifting between present tense and past tense in the same bit of narrative, for no apparent reason).</span></li>
-  <li class="li5"><span class="s5">Find an example of a pronoun error (for example, the <a href="https://chompchomp.com/rules/proagreerules.htm"><span class="s4">wrong case or number of pronoun</span></a> was used, or there is a <a href="https://chompchomp.com/rules/prorefrules.htm"><span class="s4">pronoun reference problem</span></a>). (NOTE: the <a href="https://chompchomp.com/rules/proagreerules.htm"><span class="s4">linked resource</span></a> for “wrong case or number” only briefly mentions the use of “they/them/their” as singular pronouns; in recent years, use of these pronouns as gender-neutral singular (or plural) has become increasingly mainstream/widely accepted. A little bit of casual research reveals that <a href="https://www.bbc.com/news/newsbeat-49754930"><span class="s4">this is nothing new</span></a>.)</span></li>
-  <li class="li5"><span class="s5">Find an example of “telling” that might be more effective as “showing.” <a href="https://drive.google.com/file/d/159dDKT3Bxf5ZTBv9E1qezO32TvCzbdlt/view?usp=sharing"><span class="s4"><i>Video discussion</i></span></a><i>!</i></span></li>
-  <li class="li6"><span class="s5">Maybe I will come up with some kind of prize for anyone who successfully and accurately (final decision mine, lol) comes up with a post for all eight of the above! </span><span class="s6">🏆</span></li>
-</ul>
-<p class="p7"><br></p>
-<p class="p6">For each error you find, make a post in the “Grammar Scavenger Hunt!” Discussion Board topic in class, showing the error and how you would correct it. Find as many as you can or want to! Shall we say, aim for at least three? If you want to get "ADVANCED” on this one, find more unique examples and/or reply to classmates’ posts if you see a different way to correct the error, or think it's not actually an error (why?), or think it's an error but not the one the person said it was.</p>
-<p class="p7"><br></p>
-<p class="p6">Do I really have to say let's be civil about it, keep an attitude of curiosity and exploration, and don't take any of it personally! <span class="s7">😁</span></p>
-<p class="p7"><br></p>
-<p class="p7"><br></p>
-<p class="p8"><img src="assignments%20for%20language.Pasted%20Graphic.png" width="450" height="1" alt="Pasted Graphic.pict"></p>
-<p class="p7"><br></p>
-<p class="p6"><a id="*">*</a>Although it must be said that what “Standard American English” means, and whether or how much we should care, is a <a href="https://harpers.org/wp-content/uploads/HarpersMagazine-2001-04-0070913.pdf">tense</a> and <a href="https://journals.library.columbia.edu/index.php/TMR/article/view/5442">controversial</a> topic in itself.</p>
+<p class="p1">Take a moment to check out some <a href="examples%20of%20grammatical%20errors.html"><span class="s1">examples of grammatical errors</span></a> you may want to look for.</p>
+<p class="p2"><br></p>
+<p class="p1">You may wish to watch this <a href="https://drive.google.com/file/d/1nM3yN3JkSucIjiQbHmBpvBnhan9pZRxw/view?usp=share_link">video explaining several of the grammar topics</a> involved with this assignment.</p>
+<p class="p2"><br></p>
+<p class="p1">For each error you find, make a post in the “Grammar Scavenger Hunt!” Discussion Board topic in class, showing the error and how you would correct it. Find as many as you can or want to! Shall we say, aim for at least three? If you want to get "ADVANCED” on this one, find more unique examples and/or reply to classmates’ posts if you see a different way to correct the error, or think it's not actually an error (why?), or think it's an error but not the one the person said it was.</p>
+<p class="p2"><br></p>
+<p class="p1">Do I really have to say let's be civil about it, keep an attitude of curiosity and exploration, and don't take any of it personally! <span class="s2">😁</span></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p4"><img src="assignments%20for%20language.Pasted%20Graphic.png" width="450" height="1" alt="Pasted Graphic.pict"></p>
+<p class="p2"><br></p>
+<p class="p1"><a id="*">*</a>Although it must be said that what “Standard American English” means, and whether or how much we should care, is a <a href="https://harpers.org/wp-content/uploads/HarpersMagazine-2001-04-0070913.pdf">tense</a> and <a href="https://journals.library.columbia.edu/index.php/TMR/article/view/5442">controversial</a> topic in itself.</p>
+<p class="p2"><br></p>
+<p class="p4"><img src="assignments%20for%20language.Pasted%20Graphic.png" width="450" height="1" alt="Pasted Graphic.pict"></p>
+<p class="p5"><br></p>
+<p class="p6"><a href="https://docs.google.com/document/d/10SLPpNYqbnY3zBB5ve2mXKp9n-N1NFkuFfpMCqZR_og/edit">Associated standards</a>: L.11-12.5 Demonstrate contextually appropriate use of the conventions of standardized English grammar and usage when writing or speaking. Discern when and where it is appropriate to use standardized English. Appropriately use and explain the intended purpose of language choice.</p>
+<p class="p6">L.11-12.6 Demonstrate contextually appropriate use of the conventions of standardized English capitalization, punctuation, and spelling when writing. Discern when and where it is appropriate to use standardized English. Appropriately use and explain the intended purpose.</p>
 
+
+                </div>
 
             </div>
-
         </div>
 
     </body>

@@ -31,18 +31,18 @@
             }
 
             body {
-                background: #36322e;
-                color: #b6aca2;
+                background: #e1ecf5;
+                color: #607484;
             }
 
                 a {
-                    color: #FFFFFF;
+                    color: #178fd8;
                     -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                     transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                 }
 
                     a:hover {
-                        color: #ffe1b9;
+                        color: #1266bc;
                         text-decoration: none !important;
                     }
 
@@ -61,66 +61,56 @@
                     font-size: 80%;
                 }
 
-                .title {
-                    text-align: center;
-                    width: 100%;
-                    display: block;
-                    margin: 10px 0 20px 0;
-                    padding-bottom: 8px;
-                    font-size: 175%;
-                    font-weight: 700;
-                }
-
-                .menu-button {
-                    text-align: center;
-                    margin: 0 auto;
-                    content: "";
-                    display: table;
-                    clear: both;
-                }
-
                 .menu-button a {
-                    display: inline-block;
+                    display: block;
                     float: left;
-                    background: #514c45;
+                    margin-right: 12px;
+                    background: #607483;
                     border: none;
                     border-radius: 4px;
-                    padding: 5px 10px 6px 10px;
-                    margin: 0 6px;
-                    text-decoration: none;
+                    padding: 7px 6px;
                 }
 
+                    .menu-button a svg {
+                        width: 18px;
+                        height: 18px;
+                        display: block;
+                        fill: #FFFFFF;
+                        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+
                     .menu-button a:hover {
-                        background: #ffe1b9;
-                        color: #36322e;
+                        background: #405361;
                         box-shadow: 0 4px 8px rgba(64,83,97,0.15);
                     }
 
-                    .button-text {
-                        font-size: 90%;
+                    .title {
+                        color: #405361;
+                        float: left;
+                        width: 100%;
+                        display: block;
+                        margin: 12px 0 24px 0;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid rgba(64,83,97,0.15);
+                        font-weight: 700;
                     }
 
                 .content {
-                    padding: 16px 0 0 0;
+                    padding: 16px;
                     max-width: 760px;
                     margin: 0 auto;
                 }
 
-                    .page-content {
-                        margin-top: 34px;
-                        padding: 24px 24px 18px 24px;
-                        border-radius: 0;
-                        background: #2c2926;
+                    .content-box {
+                        background: #FFFFFF;
+                        border-radius: 12px;
+                        box-shadow: 0 4px 8px rgba(64,83,97,0.05);
+                        padding: 22px 24px 32px 24px;
                     }
 
-                    @media (min-width: 760px) {
-                        .content {
-                            padding: 16px;
-                        }
-
-                        .page-content {
-                            border-radius: 4px;
-                        }
+                    .page-content {
+                        margin-top: 24px;
                     }
 
         </style>
@@ -131,28 +121,32 @@
 
         <div class="content cf">
 
-            <div class="title cf">a mind to meander</div>
+            <div class="content-box cf">
 
-            <div class="menu-button cf">
-                <a href="javascript:document.location='index.html';" class="button-home">
-                    <span class="button-text">Home</span>
-                </a>
-                <a href="javascript:document.location='_page_index.html';" class="button-list">
-                    <span class="button-text">Page List</span>
-                </a>
+                <div class="menu-button cf">
+                    <a href="javascript:document.location='index.html';" class="button-home">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M16.84 8.134L15 6.416V3a1.001 1.001 0 0 0-1-1h-1a1.001 1.001 0 0 0-1 1v.616L9.34 1.134a.5.5 0 0 0-.68 0l-7.5 7A.5.5 0 0 0 1.5 9H3v7h-.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H15V9h1.5a.5.5 0 0 0 .34-.866zM7 16v-5h4v5z" /></svg>
+                    </a>
+                    <a href="javascript:document.location='_page_index.html';" class="button-list">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M14 1H4a1.001 1.001 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1.001 1.001 0 0 0-1-1zM5.5 4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1zm6 10h-6a.5.5 0 0 1 0-1h6a.5.5 0 0 1 0 1zm1-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /></svg>
+                    </a>
 
-            </div>
+                </div>
 
-            <div class="page-content cf">
+                <div class="title cf">a mind to meander</div>
 
-                <p>This is fixin’ to be my favorite part of this little website, and I got so busy working on other parts of it that I ran out of time to come here and follow the river of my original idea.</p>
+                <div class="page-content cf">
+
+
+                    <p>This is fixin’ to be my favorite part of this little website, and I got so busy working on other parts of it that I ran out of time to come here and follow the river of my original idea.</p>
 <p>HOWEVER! I will be adding some ideas soon! <em>Check back from time to time!</em></p>
 <p>Meanwhile, why not consider trying one of the <a href="assignments%20for%20memoir.html">assignments for memoir</a>, <a href="assignments%20for%20fiction.html">assignments for fiction</a>, <a href="assignments%20for%20essays.html">assignments for essays</a>, or <a href="assignments%20for%20language.html">assignments for language</a>.</p>
 <p>If none of those appeals, just start writing something—anything! and see how far you can get and where it takes you.</p>
 
 
-            </div>
+                </div>
 
+            </div>
         </div>
 
     </body>
