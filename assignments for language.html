@@ -8,7 +8,76 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-        <title>assignments for language</title>
+        <title>meerkat skool.vpdoc: assignments for language</title>
+
+        <script>
+
+            var isMobile = navigator.userAgent.match(/Mobile/i) != null;
+
+            function updateWebApp() {
+
+                cache = window.applicationCache;
+                cache.addEventListener('onchecking',  cacheCheckingListener, false);
+                cache.addEventListener('updateready', cacheUpdateReadyListener, false);
+                cache.addEventListener('error', cacheErrorListener, false);
+                cache.addEventListener('cached', cacheCachedListener, false);
+                cache.addEventListener('progress', cacheProgressListener, false);
+                cache.addEventListener('oncached', cacheonCachedListener, false);
+
+                //waLog("started?");
+                //waLog(window.applicationCache.status + "");
+            }
+
+            function cacheCheckingListener(event) {
+
+            }
+
+            function cacheUpdateReadyListener(event) {
+                if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+                    window.applicationCache.swapCache();
+                    window.location.reload();
+                }
+            }
+
+            function cacheCachedListener(event) {
+
+            }
+
+            function cacheErrorListener(event) {
+
+            }
+
+            function cacheProgressListener(progressEvent) {
+                //waLog(window.applicationCache.status + "");
+                // waLog(progressEvent.loaded + " of " + progressEvent.total);
+            }
+
+            function cacheonCachedListener(event) {
+                //waLog("First time cached.");
+            }
+
+            function waLog(v) {
+                document.getElementById("cons").innerHTML = document.getElementById("cons").innerHTML + "<br/>!" + v
+            }
+
+            var swapped = false;
+
+            // Check if a new cache is available on page load.
+            window.addEventListener('load', function(e) {
+
+                var isIndexPage = "assignments for language.html" == "index.html";
+
+                if (isIndexPage && isMobile && window.navigator.onLine) {
+                    updateWebApp();
+                }
+
+                if (history.previous) {
+                    alert("previous!");
+                }
+
+            }, false);
+
+        </script>
 
         <style type="text/css">
 
@@ -31,86 +100,119 @@
             }
 
             body {
-                background: #282C34;
-                color: #ABB2BA;
+                background: #e8e8e8;
             }
 
-                a {
-                    color: #9BE68B;
-                    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            a {
+                color: #217dae;
+            }
+
+                a:hover {
+                    color: #17587b;
                 }
 
-                    a:hover {
-                        color: #f8ffbe;
-                    }
+            li {
+                margin-left: 16px;
+                margin-bottom: 4px;
+                font-size: 80%;
+            }
 
-                h1 {
-                    color: #FFFFFF;
-                }
+            p {
+                line-height: 1.2em !important;
+            }
 
-                img {
-                    max-width: 100% !important;
-                    height: auto !important;
-                }
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
 
-                p {
-                    line-height: 1.2em !important;
-                }
+            .toolbar {
+                width: 100%;
+                padding: 6px 6px;
+                background: #EAEAEA;
+                background: -webkit-linear-gradient(to bottom, #F5F5F5, #EAEAEA);
+                background: linear-gradient(to bottom, #F5F5F5, #EAEAEA);
+                border-bottom: 1px solid rgba(0,0,0,0.2);
+                box-shadow: 0 1px 1px rgba(0,0,0,0.075);
+                content: "";
+                display: table;
+                clear: both;
+            }
 
-                li {
-                    margin-left: 24px;
-                    margin-bottom: 4px;
-                    font-size: 80%;
-                }
-
-                .menu-button {
-                    content: "";
-                    display: block;
-                    clear: both;
-                    width: 100%;
-                    float: left;
-                    border-bottom: 1px solid rgba(255,255,255,0.15);
-                    padding-bottom: 26px;
-                    margin: 12px 0 40px -2px;
-                }
-
-                .menu-button a {
-                    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                    border: none;
-                    display: inline-block;
-                    float: left;
-                    margin-right: 16px;
-                }
-
-                    .menu-button a svg {
-                        float: left;
-                        width: 18px;
-                        height: 18px;
-                        display: inline-block;
-                        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                        fill: #9BE68B;
-                    }
-
-                    .menu-button a:hover svg {
-                        fill: #f8ffbe;
-                    }
-
-                    .menu-button-title {
-                        float: left;
-                        display: inline-block;
-                        margin: -1px 0 0 4px;
-                    }
-
-                .content {
-                    padding: 16px;
-                    max-width: 760px;
+                .toolbar-buttons {
+                    text-align: center;
                     margin: 0 auto;
                     content: "";
-                    display: block;
+                    display: table;
                     clear: both;
+                }
+
+                    .toolbar-button {
+                        background: #F8F8F8;
+                        background: -webkit-linear-gradient(to bottom, #F8F8F8, #F2F2F2);
+                        background: linear-gradient(to bottom, #F8F8F8, #F2F2F2);
+                        border: 1px solid rgba(0,0,0,0.20);
+                        box-shadow: 0 1px 1px rgba(0,0,0,0.075);
+                        border-radius: 4px;
+                        display: inline-block;
+                        float: left;
+                        background-clip: padding-box;
+                        text-indent: -9999px;
+                        margin-right: 8px;
+                        -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    }
+
+                        .button-back {
+                            margin-right: 0;
+                            border-radius: 4px 0 0 4px;
+                            border-right: 0 !important;
+                        }
+
+                        .button-forward {
+                            border-radius: 0 4px 4px 0;
+                        }
+
+                        .toolbar-button svg {
+                            width: 18px;
+                            height: 18px;
+                            display: block;
+                            margin: 4px 6px;
+                            -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                            fill: #626262;
+                        }
+
+                        .toolbar-button:hover {
+                            background: #FFFFFF;
+                            border: 1px solid rgba(0,0,0,0.25);
+                            box-shadow: 0 2px 2px rgba(0,0,0,0.15);
+                        }
+
+                            .toolbar-button:hover svg {
+                                fill: #000000;
+                            }
+
+            .content {
+                padding: 16px;
+                max-width: 960px;
+                margin: 0 auto;
+            }
+
+                .content-box {
+                    background: #FFFFFF;
+                    border-radius: 6px;
+                    box-shadow: 0 2px 4px rgba(64,83,97,0.05);
+                    border: 1px solid rgba(0,0,0,0.20);
+                    border-width: 1px 1px 4px 1px;
+                    padding: 22px 24px 32px 24px;
+                }
+
+                .title {
+                    text-align: center;
+                    width: 100%;
+                    margin: 8px auto 24px auto;
+                    font-weight: 600;
                 }
 
         </style>
@@ -118,23 +220,75 @@
     </head>
 
     <body>
+        <div class="toolbar">
+            <div class="toolbar-buttons">
+                <a href="javascript:window.history.back();" class="toolbar-button button-back"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M12 16a.997.997 0 0 1-.707-.293l-6-6a1 1 0 0 1 0-1.414l6-6a1 1 0 1 1 1.414 1.414L7.414 9l5.293 5.293A1 1 0 0 1 12 16z" /></svg></a>
+                <a href="javascript:window.history.forward();" class="toolbar-button button-forward"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M6 16a1 1 0 0 1-.707-1.707L10.586 9 5.293 3.707a1 1 0 0 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6A.997.997 0 0 1 6 16z" /></svg></a>
+                <a href="javascript:document.location='index.html';" class="toolbar-button button-start"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M16.84 8.134L15 6.416V3a1.001 1.001 0 0 0-1-1h-1a1.001 1.001 0 0 0-1 1v.616L9.34 1.134a.5.5 0 0 0-.68 0l-7.5 7A.5.5 0 0 0 1.5 9H3v7h-.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H15V9h1.5a.5.5 0 0 0 .34-.866zM7 16v-5h4v5z" /></svg></a>
+                <a href="javascript:document.location='_page_index.html';" class="toolbar-button button-list"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M14 1H4a1.001 1.001 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1.001 1.001 0 0 0-1-1zM5.5 4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1zm6 10h-6a.5.5 0 0 1 0-1h6a.5.5 0 0 1 0 1zm1-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /></svg></a>
+            </div>
+        </div>
 
         <div class="content">
 
-            <div class="menu-button">
-                <a href="javascript:document.location='index.html';" class="button-home">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M16.84 8.134L15 6.416V3a1.001 1.001 0 0 0-1-1h-1a1.001 1.001 0 0 0-1 1v.616L9.34 1.134a.5.5 0 0 0-.68 0l-7.5 7A.5.5 0 0 0 1.5 9H3v7h-.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H15V9h1.5a.5.5 0 0 0 .34-.866zM7 16v-5h4v5z" /></svg>
-                    <span class="menu-button-title">Home</span>
-                </a>
-                <a href="javascript:document.location='_page_index.html';" class="button-list">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18"><path d="M14 1H4a1.001 1.001 0 0 0-1 1v14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1.001 1.001 0 0 0-1-1zM5.5 4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1zm6 10h-6a.5.5 0 0 1 0-1h6a.5.5 0 0 1 0 1zm1-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zm0-3h-7a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1z" /></svg>
-                    <span class="menu-button-title">Pages</span>
-                </a>
+            <div class="content-box">
+
+                <h3 class="title">assignments for language</h3>
+
+                <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    li.li4 {margin: 6.0px 0.0px 3.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #103cc0}
+    li.li5 {margin: 0.0px 0.0px 3.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    li.li6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    span.s1 {font: 12.0px Helvetica}
+    span.s2 {-webkit-text-stroke: 0px #000000}
+    span.s3 {font-kerning: none; -webkit-text-stroke: 0px #000000}
+    span.s4 {text-decoration: underline ; font-kerning: none; -webkit-text-stroke: 0px #103cc0}
+    span.s5 {font-kerning: none}
+    span.s6 {font: 12.0px 'Apple Color Emoji'; font-kerning: none}
+    span.s7 {font: 12.0px 'Apple Color Emoji'}
+    ul.ul1 {list-style-type: disc}
+  </style>
+
+<p class="p1">If you want to work on understanding how language works, consider one of these assignments. <i>Check back from time to time, as I plan to keep adding to these. Suggestions welcome!</i></p>
+<p class="p2"><br></p>
+<p class="p3"><b>Grammar Scavenger Hunt</b><span class="s1"> (T3: Language)<span class="Apple-converted-space">&nbsp;</span></span></p>
+<p class="p2"><br></p>
+<p class="p1">Begin by browsing through the revision project discussion boards, websites, social media posts, or emails you've received (or written), looking for errors or irregularities in grammar or usage. For each one you find, consider how you would correct the error.</p>
+<p class="p2"><br></p>
+<p class="p1">Please do not just google “examples of ____ error” and paste in the answers. Find your error examples in real-life, to make this assignment more authentic.</p>
+<p class="p2"><br></p>
+<p class="p1">For this assignment, we’re talking about “Standard American English.”<a href="assignments%20for%20language.html">*</a> What is or isn’t an “error” can vary depending on context, intended audience, etc. This activity is not intended as a judgment of anyone’s writing or speaking; it’s an opportunity to think like an editor. If you disagree with something someone posts in the Discussion Board, engage them but don’t yell at them.</p>
+<p class="p2"><br></p>
+<p class="p1">Following are some examples of kinds of errors you may look for. You may wish to watch this <a href="https://drive.google.com/file/d/1nM3yN3JkSucIjiQbHmBpvBnhan9pZRxw/view?usp=share_link">video explaining several of the grammar topics</a> involved with this assignment.</p>
+<ul class="ul1">
+  <li class="li4"><span class="s2"></span><span class="s3">Find an example of a <a href="https://chompchomp.com/terms/fusedsentence.htm"><span class="s4">run-on sentence</span></a>. <a href="https://drive.google.com/file/d/1_Xd6rIJ5nWOKxhr6d92FiNwsyf3tHf5c/view?usp=sharing"><span class="s4"><i>Video examples</i></span></a><i>!</i></span></li>
+  <li class="li5"><span class="s5">Find an example of a <a href="https://chompchomp.com/terms/fragment.htm"><span class="s4">sentence fragment</span></a>.</span></li>
+  <li class="li5"><span class="s5">Find an example of a <a href="https://chompchomp.com/terms/misplacedmodifier.htm"><span class="s4">misplaced</span></a> or <a href="https://chompchomp.com/terms/danglingmodifier.htm"><span class="s4">dangling</span></a> modifier. <a href="https://drive.google.com/file/d/1yfjf_BmPC_1KzF8BTX2uB2npaU0_gGjf/view?usp=share_link"><span class="s4">Here’s a video</span></a> discussing an example of a dangling modifier.</span></li>
+  <li class="li5"><span class="s5">Find an example of a <a href="https://owl.purdue.edu/owl/general_writing/punctuation/index.html"><span class="s4">punctuation</span></a> error.</span></li>
+  <li class="li5"><span class="s5">Find an example of a <a href="https://owl.purdue.edu/owl/general_writing/mechanics/help_with_capitals.html"><span class="s4">capitalization</span></a> error.</span></li>
+  <li class="li5"><span class="s5">Find an example of a <a href="https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verb_tense_consistency.html"><span class="s4">verb tense inconsistency</span></a> (for example, shifting between present tense and past tense in the same bit of narrative, for no apparent reason).</span></li>
+  <li class="li5"><span class="s5">Find an example of a pronoun error (for example, the <a href="https://chompchomp.com/rules/proagreerules.htm"><span class="s4">wrong case or number of pronoun</span></a> was used, or there is a <a href="https://chompchomp.com/rules/prorefrules.htm"><span class="s4">pronoun reference problem</span></a>). (NOTE: the <a href="https://chompchomp.com/rules/proagreerules.htm"><span class="s4">linked resource</span></a> for “wrong case or number” only briefly mentions the use of “they/them/their” as singular pronouns; in recent years, use of these pronouns as gender-neutral singular (or plural) has become increasingly mainstream/widely accepted. A little bit of casual research reveals that <a href="https://www.bbc.com/news/newsbeat-49754930"><span class="s4">this is nothing new</span></a>.)</span></li>
+  <li class="li5"><span class="s5">Find an example of “telling” that might be more effective as “showing.” <a href="https://drive.google.com/file/d/159dDKT3Bxf5ZTBv9E1qezO32TvCzbdlt/view?usp=sharing"><span class="s4"><i>Video discussion</i></span></a><i>!</i></span></li>
+  <li class="li6"><span class="s5">Maybe I will come up with some kind of prize for anyone who successfully and accurately (final decision mine, lol) comes up with a post for all eight of the above! </span><span class="s6">🏆</span></li>
+</ul>
+<p class="p7"><br></p>
+<p class="p6">For each error you find, make a post in the “Grammar Scavenger Hunt!” Discussion Board topic in class, showing the error and how you would correct it. Find as many as you can or want to! Shall we say, aim for at least three? If you want to get "ADVANCED” on this one, find more unique examples and/or reply to classmates’ posts if you see a different way to correct the error, or think it's not actually an error (why?), or think it's an error but not the one the person said it was.</p>
+<p class="p7"><br></p>
+<p class="p6">Do I really have to say let's be civil about it, keep an attitude of curiosity and exploration, and don't take any of it personally! <span class="s7">😁</span></p>
+<p class="p7"><br></p>
+<p class="p7"><br></p>
+<p class="p8"><img src="assignments%20for%20language.Pasted%20Graphic.png" width="450" height="1" alt="Pasted Graphic.pict"></p>
+<p class="p7"><br></p>
+<p class="p6"><a id="*">*</a>Although it must be said that what “Standard American English” means, and whether or how much we should care, is a <a href="https://harpers.org/wp-content/uploads/HarpersMagazine-2001-04-0070913.pdf">tense</a> and <a href="https://journals.library.columbia.edu/index.php/TMR/article/view/5442">controversial</a> topic in itself.</p>
+
+
             </div>
-
-
-                <p>Write about assignments for language here.</p>
-
 
         </div>
     </body>
