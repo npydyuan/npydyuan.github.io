@@ -1,2 +1,2 @@
 # npydyuan.github.io
-Static website (made with VoodooPad so far, a mix of markdown and rich text pages) to be used as the textbook for my creative writing class.
+This is the work-in-progress textbook for my creative writing class at [eAchieve Academy](https://www.eachieve.com). It's made via web exports from built-in templates in [VoodooPad](https://www.voodoopad.com/) at the moment; mostly markdown but maybe a few rich text pages.
