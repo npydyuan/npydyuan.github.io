@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Imaginamesque</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding-top: 50px;
+    }
+    #names {
+      margin-top: 20px;
+      font-size: 1.5em;
+      line-height: 1.8;
+    }
+    button {
+      font-size: 1em;
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background-color: #222;
+      color: white;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>Imaginamesque</h1>
+  <h6>(in memory of whoever made the original)</h6>
+  <button id="generateButton">Generate Names</button>
+  <div id="names"></div>
+
+  <script>
+    (function() {
+      const prefixes = [
+        "zan", "kel", "dro", "var", "tal", "mor", "nex", "riv", "sha", "lum",
+        "tor", "vek", "ser", "jor", "quin", "bar", "lok", "fen", "gral", "xan",
+        "thal", "bel", "gar", "yor", "kor", "maz", "sil", "tre", "vor", "zel",
+        "ral", "dru", "cal", "jen", "mon", "ska", "trev", "vin", "nor", "brak",
+        "eld", "zor", "krel", "varn", "tarn", "lur", "drel", "orn", "jal", "rek",
+        "karn", "stron", "val", "xel", "yen", "frak", "zim", "grel", "plok", "narn",
+        "brek", "sarn", "hul", "kriv", "olv", "mek", "zorv", "trex", "brol", "larn",
+        "nexi", "jorv", "suld", "tarnak", "zeth", "kol", "spar", "wren", "zulg", "laz",
+        "drav", "thok", "prax", "yend", "frel", "garn", "hax", "morn", "grav", "qen",
+        "brin", "keph", "dour", "zarn", "threk", "voln", "kren", "shur", "farn", "joln",
+        "vekra", "morv", "quarn", "denz", "rusk", "jarn", "slor", "brym", "kesh", "darv",
+        "luth", "jex", "marn", "phal", "vurn", "nesk", "kaln", "zorvix", "thrun", "glim",
+        "krev", "suln", "yorn", "hexar", "dulm", "vesk", "orv", "prun", "larnok", "vrel",
+        "zanek", "torv", "dush", "grem", "sharn", "mekra", "trusk", "qorn", "vuld", "theru",
+        "drav", "thon", "kil", "vek", "sarn", "brak", "zurn", "elv", "kran", "dask",
+        "vrel", "plin", "zorv", "gron", "lurv", "mok", "trez", "zarn", "drelk", "brox",
+        "jan", "klor", "nef", "grex", "syl", "bren", "tho", "yul", "krav", "marl",
+        "shav", "uln", "vrax", "jarn", "griv", "nask", "delv", "rekh", "shan", "thov",
+        "pral", "zeth", "dalk", "flen", "mirn", "zov", "glan", "krim", "snar", "durv"
+
+
+      ];
+
+      const middles = [
+        "a", "e", "i", "o", "u", "ae", "io", "ou", "ua", "ei",
+        "au", "oo", "ei", "ia", "ai", "ue", "eo", "oi", "eu", "ay",
+        "ei", "uu", "ia", "ao", "ei", "io", "ea", "aei", "iou", "aeu",
+        "eya", "aya", "uya", "oya", "aiu", "ieo", "aui", "oie", "eou", "oua",
+        "ae", "io", "uu", "oi", "au", "oa", "ei", "ia", "ay", "ua",
+        "eo", "oo", "ai", "ie", "uae", "iou", "eau", "ue", "iya", "aio",
+        "eoi", "aeo", "uya", "aui", "oya", "iea", "aio", "iau", "oae", "aye",
+        "iya", "uai", "ioua", "ayeo", "oei", "eua", "uao", "eya", "uio", "oue",
+        "aui", "ioe", "aeu", "eia", "uei", "aya", "eyo", "oua", "ayo", "euo"
+
+      ];
+
+      const suffixes = [
+        "dor", "nak", "vek", "zin", "tur", "rax", "von", "mir", "lek", "sar",
+        "zor", "tek", "min", "gul", "ren", "bex", "tum", "xis", "lom", "dur",
+        "qar", "jas", "nim", "pol", "kaz", "run", "kel", "fim", "gen", "zon",
+        "vok", "rak", "jel", "tor", "mer", "gol", "han", "tir", "zem", "dorv",
+        "vran", "mur", "hal", "nux", "zan", "sor", "bel", "kam", "tul", "jur",
+        "brox", "zem", "lur", "dex", "flar", "zonk", "kram", "nok", "krul", "zel",
+        "thun", "sol", "vor", "brul", "drak", "garn", "qel", "vost", "nem", "zol",
+        "grel", "prax", "xul", "rand", "trel", "mont", "sev", "wok", "jor", "glim",
+        "xar", "krel", "marn", "xen", "trox", "krim", "nuv", "vrol", "quor", "snak",
+        "vax", "dron", "lix", "mar", "zun", "reth", "nax", "thor", "quin", "jax",
+        "ber", "dol", "sek", "vun", "tril", "mos", "grin", "harn", "zorin", "fex",
+        "tok", "vorn", "garth", "shen", "phor", "nith", "zrak", "loth", "drim", "kul",
+        "jent", "qor", "spen", "musk", "zelm", "rath", "korn", "lim", "vekul", "sorn",
+        "darx", "tumel", "fron", "jek", "lurv", "marn", "quess", "dral", "pelk", "trun",
+        "vok", "dran", "quor", "len", "grim", "fel", "raxor", "tul", "mon", "zeth",
+        "ker", "joth", "lum", "zen", "tarn", "muk", "loth", "vekul", "shen", "kroz",
+        "yem", "phos", "zul", "garon", "fenth", "bros", "mal", "gorn", "thas", "zek",
+        "ranth", "jask", "dir", "phar", "morl", "kend", "zom", "jol", "threl", "ven",
+        "krun", "dorv", "sern", "flak", "xarn", "plon", "thex", "bur", "derm", "grell"
+
+
+      ];
+
+      function randomFrom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      function generateName() {
+        const nameType = Math.random();
+        let parts = [];
+
+        if (nameType < 0.05) { // Rare: prefix + suffix without middle
+          parts = [randomFrom(prefixes), randomFrom(suffixes)];
+        } else if (nameType < 0.2) { // Rare: just a prefix
+          parts = [randomFrom(prefixes)];
+        } else if (nameType < 0.35) { // Rare: just a suffix
+          parts = [randomFrom(suffixes)];
+        } else if (nameType < 0.6) { // Common: prefix + middle
+          parts = [randomFrom(prefixes), randomFrom(middles)];
+        } else if (nameType < 0.8) { // Common: middle + suffix
+          parts = [randomFrom(middles), randomFrom(suffixes)];
+        } else { // Very common: prefix + middle + suffix
+          parts = [randomFrom(prefixes), randomFrom(middles), randomFrom(suffixes)];
+        }
+
+        return parts.join("");
+      }
+
+      function generateNames() {
+        const names = [];
+        for (let i = 0; i < 4; i++) {
+          names.push(generateName());
+        }
+        document.getElementById("names").innerHTML = names.join("<br>");
+      }
+
+      document.getElementById("generateButton").addEventListener("click", generateNames);
+      generateNames();
+    })();
+  </script>
+</body>
+</html>
