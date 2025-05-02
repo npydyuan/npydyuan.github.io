@@ -57,22 +57,23 @@
         "jan", "klor", "nef", "grex", "syl", "bren", "tho", "yul", "krav", "marl",
         "shav", "uln", "vrax", "jarn", "griv", "nask", "delv", "rekh", "shan", "thov",
         "pral", "zeth", "dalk", "flen", "mirn", "zov", "glan", "krim", "snar", "durv",
-        "ers", "ersup", "danc"
+        "ers", "ersup", "danc", "plek", "dek", "cl", "din"
 
 
       ];
 
       const middles = [
-        "a", "e", "i", "o", "u", "ae", "io", "ou", "ua", "ei", "y",
-        "au", "oo", "ei", "ia", "ai", "ue", "eo", "oi", "eu", "ay",
-        "ei", "uu", "ia", "ao", "ei", "io", "ea", "aei", "iou", "aeu",
-        "eya", "aya", "uya", "oya", "aiu", "ieo", "aui", "oie", "eou", "oua",
-        "ae", "io", "uu", "oi", "au", "oa", "ei", "ia", "ay", "ua",
-        "eo", "oo", "ai", "ie", "uae", "iou", "eau", "ue", "iya", "aio",
-        "eoi", "aeo", "uya", "aui", "oya", "iea", "aio", "iau", "oae", "aye",
-        "iya", "uai", "ioua", "ayeo", "oei", "eua", "uao", "eya", "uio", "oue",
-        "aui", "ioe", "aeu", "eia", "uei", "aya", "eyo", "oua", "ayo", "euo",
-        "up"
+        "a", "a", "a", "a", "ae", "ae", "aei", "aeo", "aeu", "aeu", "ai", "ai",
+        "aio", "aio", "aiu", "ao", "au", "au", "aui", "aui", "aui", "ay", "ay",
+        "aya", "aya", "aye", "ayo", "e", "e", "e", "e", "ea", "eau",
+        "ei", "ei", "ei", "ei", "ei", "eia", "eo", "eo", "eoi", "eou", "eu",
+        "eua", "euo", "eya", "eya", "eyo", "i", "i", "i", "i", "ia", "ia", "ia",
+        "iau", "ie", "iea", "ieo", "io", "io", "io", "ioe", "iou", "iou", "ioua",
+        "iya", "iya", "o", "o", "o", "o", "oa", "oae", "oei", "oi", "oi", "oie",
+        "oo", "oo", "ou", "oua", "oua", "oue", "oya", "oya", "u", "u", "u", "u",
+        "ua", "ua", "uae", "uai", "uao", "ue", "ue", "uei", "uio", "up", "uu", "uu",
+        "uya", "uya", "y", "y", "ya"
+
 
       ];
 
@@ -96,7 +97,7 @@
         "yem", "phos", "zul", "garon", "fenth", "bros", "mal", "gorn", "thas", "zek",
         "ranth", "jask", "dir", "phar", "morl", "kend", "zom", "jol", "threl", "ven",
         "krun", "dorv", "sern", "flak", "xarn", "plon", "thex", "bur", "derm", "grell",
-        "ita", "rutyl", "mor", "kle"
+        "ita", "rutyl", "mor", "kle", "im", "ple", "re", "ny", "pants", "din", "max"
 
 
       ];
@@ -109,7 +110,7 @@
         const nameType = Math.random();
         let parts = [];
 
-        if (nameType < 0.1) { // prefix + suffix without middle
+        if (nameType < 0.1) { // prefix + suffix
           parts = [randomFrom(prefixes), randomFrom(suffixes)];
         } else if (nameType < 0.2) { // just a prefix
           parts = [randomFrom(prefixes)];
