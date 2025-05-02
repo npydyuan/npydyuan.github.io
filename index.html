@@ -109,17 +109,23 @@
         const nameType = Math.random();
         let parts = [];
 
-        if (nameType < 0.05) { // Rare: prefix + suffix without middle
+        if (nameType < 0.1) { // prefix + suffix without middle
           parts = [randomFrom(prefixes), randomFrom(suffixes)];
-        } else if (nameType < 0.2) { // Rare: just a prefix
+        } else if (nameType < 0.2) { // just a prefix
           parts = [randomFrom(prefixes)];
-        } else if (nameType < 0.35) { // Rare: just a suffix
+        } else if (nameType < 0.3) { // just a suffix
           parts = [randomFrom(suffixes)];
-        } else if (nameType < 0.6) { // Common: prefix + middle
+        } else if (nameType < 0.4) { // prefix + middle
           parts = [randomFrom(prefixes), randomFrom(middles)];
-        } else if (nameType < 0.8) { // Common: middle + suffix
+        } else if (nameType < 0.5) { // middle + suffix
           parts = [randomFrom(middles), randomFrom(suffixes)];
-        } else { // Very common: prefix + middle + suffix
+        } else if (nameType < 0.6) { // prefix + prefix
+          parts = [randomFrom(prefixes), randomFrom(prefixes)];
+        } else if (nameType < 0.7) { // prefix + prefix + middle
+          parts = [randomFrom(prefixes), randomFrom(prefixes), randomFrom(middles)];
+        } else if (nameType < 0.8) { // prefix + prefix + middle + suffix
+          parts = [randomFrom(prefixes), randomFrom(prefixes), randomFrom(middles), randomFrom(suffixes)];
+        } else { // prefix + middle + suffix
           parts = [randomFrom(prefixes), randomFrom(middles), randomFrom(suffixes)];
         }
 
