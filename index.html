@@ -69,11 +69,11 @@
         "a", "a", "a", "a", "ae", "ae", "aei", "aeo", "aeu", "aeu", "ai", "ai",
         "aio", "aio", "aiu", "ao", "au", "au", "aui", "aui", "aui", "ay", "ay",
         "aya", "aya", "aye", "ayo", "e", "e", "e", "e", "ea", "eau",
-        "ei", "ei", "ei", "ei", "ei", "eia", "eo", "eo", "eoi", "eou", "eu",
+        "ei", "ei", "ei", "ei", "ei", "eia", "ek", "el", "eo", "eo", "eoi", "eou", "eu",
         "eua", "euo", "eya", "eya", "eyo", "i", "i", "i", "i", "ia", "ia", "ia",
         "iau", "ie", "iea", "ieo", "io", "io", "io", "ioe", "iou", "iou", "ioua",
-        "iya", "iya", "o", "o", "o", "o", "oa", "oae", "oei", "oi", "oi", "oie",
-        "oo", "oo", "ou", "oua", "oua", "oue", "oya", "oya", "u", "u", "u", "u",
+        "iya", "iya", "ny", "o", "o", "o", "o", "oa", "oae", "oei", "oi", "oi", "oie",
+        "oo", "oo", "ou", "oua", "oua", "oue", "oya", "oya", "ra", "u", "u", "u", "u",
         "ua", "ua", "uae", "uai", "uao", "ue", "ue", "uei", "uio", "up", "uu", "uu",
         "uya", "uya", "y", "y", "ya"
 
@@ -81,27 +81,23 @@
       ];
 
       const suffixes = [
-        "dor", "nak", "vek", "zin", "tur", "rax", "von", "mir", "lek", "sar",
-        "zor", "tek", "min", "gul", "ren", "bex", "tum", "xis", "lom", "dur",
-        "qar", "jas", "nim", "pol", "kaz", "run", "kel", "fim", "gen", "zon",
-        "vok", "rak", "jel", "tor", "mer", "gol", "han", "tir", "zem", "dorv",
-        "vran", "mur", "hal", "nux", "zan", "sor", "bel", "kam", "tul", "jur",
-        "brox", "zem", "lur", "dex", "flar", "zonk", "kram", "nok", "krul", "zel",
-        "thun", "sol", "vor", "brul", "drak", "garn", "qel", "vost", "nem", "zol",
-        "grel", "prax", "xul", "rand", "trel", "mont", "sev", "wok", "jor", "glim",
-        "xar", "krel", "marn", "xen", "trox", "krim", "nuv", "vrol", "quor", "snak",
-        "vax", "dron", "lix", "mar", "zun", "reth", "nax", "thor", "quin", "jax",
-        "ber", "dol", "sek", "vun", "tril", "mos", "grin", "harn", "zorin", "fex",
-        "tok", "vorn", "garth", "shen", "phor", "nith", "zrak", "loth", "drim", "kul",
-        "jent", "qor", "spen", "musk", "zelm", "rath", "korn", "lim", "vekul", "sorn",
-        "darx", "tumel", "fron", "jek", "lurv", "marn", "quess", "dral", "pelk", "trun",
-        "vok", "dran", "quor", "len", "grim", "fel", "raxor", "tul", "mon", "zeth",
-        "ker", "joth", "lum", "zen", "tarn", "muk", "loth", "vekul", "shen", "kroz",
-        "yem", "phos", "zul", "garon", "fenth", "bros", "mal", "gorn", "thas", "zek",
-        "ranth", "jask", "dir", "phar", "morl", "kend", "zom", "jol", "threl", "ven",
-        "krun", "dorv", "sern", "flak", "xarn", "plon", "thex", "bur", "derm", "grell",
-        "ita", "rutyl", "mor", "kle", "im", "ple", "re", "ny", "pants", "din", "max"
-
+         "bel", "ber", "bex", "brox", "bros", "brul", "bur", "darx", "derm", "dex", "din", "dir",
+         "dol", "dor", "dorv","drak", "dran", "dral", "drim", "dron", "dul", "dur", "fel", "fenth",
+         "fex", "fim", "flak", "flar", "fron", "garon", "garn", "garth", "gen", "glim", "gol",
+         "gorn", "grel", "grell", "grim", "grin", "hal", "han", "harn", "im", "ita", "jas", "jask",
+         "jax", "jek", "jel", "jent", "jol", "jor", "joth", "jur", "kam", "kaz", "kel", "kend",
+         "ker", "kle", "korn", "kram", "krel", "krim", "krul", "krun", "kul", "kroz", "lek", "len",
+         "lim", "lix", "lom", "loth", "lum", "lur", "lurv", "mal", "mar", "marn", "marn", "max",
+         "mer", "min", "mir", "mon", "mont", "mor", "morl", "mos", "muk", "mur", "mush",
+         "nak", "nax", "nem", "nim", "nith", "nok", "nux", "nuv", "ny", "pants", "pelk", "phar",
+         "phor", "phos", "ple", "plon", "pol", "prax", "qar", "qel", "qor", "quess", "quin", "quor",
+         "quor", "rak", "rand", "ranth", "rath", "rax", "raxor", "re", "ren", "reth", "run", "rutyl",
+         "sar", "sek", "sern", "sev", "shen", "shen", "snak", "sol", "sor", "sorn", "spen", "tarn",
+         "tek", "thex", "threl", "thun", "thas", "thor", "tir", "tok", "tor", "trel", "tril", "trox",
+         "trun", "tul", "tum", "tumel", "ul", "tur", "vek", "vekul", "ven", "vax",
+         "vok", "von", "vorn", "vost", "vran", "vrol", "vun", "wok", "xar", "xarn", "xen",
+         "xis", "xul", "yem", "zan", "zek", "zel", "zelm", "zem", "zen", "zeth", "zin",
+         "zol", "zom", "zon", "zonk", "zor", "zorin", "zrak", "zul", "zun"
 
       ];
 
