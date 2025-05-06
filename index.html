@@ -54,11 +54,11 @@
         "oran", "orin", "orn", "orv", "ost", "pad", "phal", "plin", "plek", "plok", "prax",
         "pral", "prun", "qen", "qorn", "quarn", "quin", "ral", "rek", "rekh", "riv",
         "rusk", "sam", "sarn", "sarn", "ser", "sharn", "shan", "shav", "sha", "shur", "sil",
-        "ska", "slor", "snar", "snek", "spar", "sq", "sq", "stron", "suln", "suld", "syl", "tal", "tarn",
+        "ska", "slor", "snar", "snek", "spar", "sq", "sq", "stron", "suln", "suld", "sut", "syl", "tal", "tarn",
         "tarnak", "tel", "thal", "theru", "thok", "thon", "tho", "thov", "threk",
         "thrun", "tin", "tit", "tor", "torv", "tre", "trev", "trex", "trez", "trusk", "udin", "udon",
         "ulen", "uln", "urak", "val", "var", "varn", "vek", "vek", "vekra", "vesk",
-        "vin", "vor", "vok", "voln", "vrax", "vrel", "vrel", "vurn", "vuld", "wren",
+        "vin", "viol", "vor", "vok", "voln", "vrax", "vrel", "vrel", "vurn", "vuld", "wren",
         "xan", "xel", "yen", "yend", "yorn", "yor", "yul", "yxen", "zan", "zanek",
         "zarn", "zarn", "zel", "zeth", "zeth", "zim", "zor", "zov", "zorv", "zorv",
         "zorvix", "zulg", "zurn"
@@ -76,7 +76,7 @@
         "ei", "ei", "ei", "ei", "ei", "eia", "ek", "el", "eo", "eo", "eoi", "eou", "eu",
         "eua", "euo", "eya", "eya", "eyo", "i", "i", "i", "i", "ia", "ia", "ia",
         "i", "i", "i", "i", "ia",
-        "iau", "ie", "iea", "ieo", "io", "io", "io", "ioe", "iou", "iou", "ioua",
+        "iau", "ie", "iea", "ieo", "io", "io", "io", "ioe", "iou", "iou", "ioua", "it",
         "iya", "iya", "ny", "o", "o", "o", "o", "oa", "oae", "oei", "oi", "oi", "oie",
         "ny", "o", "o", "o", "o", "oa",
         "oo", "oo", "oo", "ou", "oua", "oua", "oue", "oya", "oya", "pa", "ra", "ri",
@@ -138,23 +138,23 @@
         const nameType = Math.random();
         let parts = [];
 
-        if (nameType < 0.1) { // prefix + suffix
+        if (nameType < 0.11) { // prefix + suffix
           parts = [randomFrom(prefixes), randomFrom(suffixes)];
         } else if (nameType < 0.2) { // just a prefix
           parts = [randomFrom(prefixes)];
-        } else if (nameType < 0.3) { // just a suffix
+        } else if (nameType < 0.29) { // just a suffix
           parts = [randomFrom(suffixes)];
         } else if (nameType < 0.4) { // prefix + middle
           parts = [randomFrom(prefixes), randomFrom(middles)];
-        } else if (nameType < 0.475) { // middle + suffix
+        } else if (nameType < 0.51) { // middle + suffix
           parts = [randomFrom(middles), randomFrom(suffixes)];
-        } else if (nameType < 0.55) { // prefix + prefix
+        } else if (nameType < 0.62) { // prefix + prefix
           parts = [randomFrom(prefixes), randomFrom(prefixes)];
-        } else if (nameType < 0.65) { // prefix + prefix + middle
+        } else if (nameType < 0.73) { // prefix + prefix + middle
           parts = [randomFrom(prefixes), randomFrom(prefixes), randomFrom(middles)];
-        } else if (nameType < 0.725) { // prefix + prefix + middle + suffix
+        } else if (nameType < 0.8) { // prefix + prefix + middle + suffix
           parts = [randomFrom(prefixes), randomFrom(prefixes), randomFrom(middles), randomFrom(suffixes)];
-        } else if (nameType < 0.726) { // middle + middle + middle + middle
+        } else if (nameType < 0.81) { // middle + middle + middle + middle
           parts = [randomFrom(prefixes), randomFrom(prefixes), randomFrom(middles), randomFrom(suffixes)];
         } else { // prefix + middle + suffix
           parts = [randomFrom(prefixes), randomFrom(middles), randomFrom(suffixes)];
