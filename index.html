@@ -43,7 +43,7 @@
         "atel", "avel", "avon", "bar", "bel", "bren", "brek", "brin", "brox", "brol",
         "brak", "brak", "brym", "cal", "cl", "dalk", "danc", "darv", "dask", "dek",
         "delv", "denz", "din", "dour", "drav", "drav", "drel", "drelk", "dulm", "dush",
-        "dro", "dru", "durv", "eld", "elv", "egur", "elun", "enar", "eph", "ers", "ersup",
+        "dro", "dru", "durv", "eld", "elv", "egur", "elun", "enar", "eph", "ers", "ers",
         "es", "farn", "fen", "flen", "frel", "frak", "gar", "garn", "glan", "glim", "gral",
         "grav", "grel", "grem", "grex", "griv", "gron", "hul", "hax", "hexar", "iz", "im","jal",
         "jan", "jarn", "jarn", "jen", "jex", "jor", "jorv", "joln", "kaln", "kal", "karn",
@@ -152,9 +152,11 @@
           parts = [randomFrom(prefixes), randomFrom(prefixes)];
         } else if (nameType < 0.73) { // prefix + prefix + middle
           parts = [randomFrom(prefixes), randomFrom(prefixes), randomFrom(middles)];
-        } else if (nameType < 0.8) { // prefix + prefix + middle + suffix
+        } else if (nameType < 0.76) { // prefix + prefix + middle + suffix
           parts = [randomFrom(prefixes), randomFrom(prefixes), randomFrom(middles), randomFrom(suffixes)];
-        } else if (nameType < 0.81) { // middle + middle + middle + middle
+        } else if (nameType < 0.79) { // prefix + middle + middle + suffix
+          parts = [randomFrom(prefixes), randomFrom(middles), randomFrom(middles), randomFrom(suffixes)];
+        } else if (nameType < 0.8) { // middle + middle + middle + middle
           parts = [randomFrom(prefixes), randomFrom(prefixes), randomFrom(middles), randomFrom(suffixes)];
         } else { // prefix + middle + suffix
           parts = [randomFrom(prefixes), randomFrom(middles), randomFrom(suffixes)];
